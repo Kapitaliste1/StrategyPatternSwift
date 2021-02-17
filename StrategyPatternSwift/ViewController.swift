@@ -31,7 +31,10 @@ class ViewController: UIViewController {
     
     @IBAction func payAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "PaymentChoiceViewController")
+        let viewController = storyboard.instantiateViewController(withIdentifier: "PaymentChoiceViewController") as! PaymentChoiceViewController
+        if let order = self.currentOrder{
+            viewController.currentOrder = order
+        }
         viewController.modalPresentationStyle = .overCurrentContext
         self.show(viewController, sender: self)
     }

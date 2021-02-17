@@ -9,6 +9,7 @@ import UIKit
 
 class PaymentChoiceViewController: UIViewController {
     var paymentMethodArray : [PaymentMethod] = [PaymentMethod]()
+    var currentOrder : Order?
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,50 @@ class PaymentChoiceViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func payAction(_ sender: Any) {
+        
+        if let order = self.currentOrder, let selectedPaymentMethod = self.paymentMethodArray.filter({ $0.isSelected == true }).first{
+            var body : String = ""
+
+            let alertController = UIAlertController(title: "Alert", message: body, preferredStyle: .alert)
+
+            switch selectedPaymentMethod.name {
+            case "PayPal":
+                order.processOrder(strategy: PayByPayPal.shared)
+                PayByPayPal.shared.pay(paymentAmount: order.totalCost) { (success) in
+                    body = success
+                } failureHandler: { (error) in
+                    body = error
+                }
+                break
+            case "Credit Card":
+                order.processOrder(strategy: PayByCreditCard.shared)
+                PayByCreditCard.shared.pay(paymentAmount: order.totalCost) { (success) in
+                    body = success
+                } failureHandler: { (error) in
+                    body = error
+                }
+
+                break
+            default:
+                body = "Select a payment method."
+                break
+            }
+            
+            let reloadAction = UIAlertAction(title: "Dismiss", style: .destructive) { (action:UIAlertAction) in
+                self.dismiss(animated: true, completion: nil)
+            }
+            alertController.addAction(reloadAction)
+            alertController.message = body
+            self.present(alertController, animated: true, completion: nil)
+
+        }
+        
+        
+        
+        
+
+    }
     
 }
 

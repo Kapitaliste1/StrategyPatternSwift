@@ -37,7 +37,7 @@
                                     <constraint firstAttribute="height" constant="50" id="VfV-hd-9zg"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="hbg-yQ-N1r"/>
                                 </constraints>
-                                <state key="normal" title="Pay">
+                                <state key="normal" title="Proceed">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -94,6 +94,20 @@
                                     <outlet property="delegate" destination="rVr-Gz-VYa" id="LmP-HV-sYz"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FZ-cX-caY">
+                                <rect key="frame" x="107" y="648" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Mfe-zd-CIc"/>
+                                    <constraint firstAttribute="height" constant="50" id="rtu-da-i1o"/>
+                                </constraints>
+                                <state key="normal" title="Pay">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="payAction:" destination="rVr-Gz-VYa" eventType="touchUpInside" id="yqj-7x-6MN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FIb-oE-hMH"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -104,7 +118,9 @@
                             <constraint firstItem="PNT-Jj-eVq" firstAttribute="width" secondItem="ugH-U3-KWp" secondAttribute="width" id="G5X-Fl-Ubz"/>
                             <constraint firstItem="488-sI-sA7" firstAttribute="centerY" secondItem="ugH-U3-KWp" secondAttribute="centerY" id="QyH-x8-Avl"/>
                             <constraint firstItem="PNT-Jj-eVq" firstAttribute="centerX" secondItem="FIb-oE-hMH" secondAttribute="centerX" id="bfY-7t-flW"/>
+                            <constraint firstItem="0FZ-cX-caY" firstAttribute="centerX" secondItem="ugH-U3-KWp" secondAttribute="centerX" id="hI9-WM-dXp"/>
                             <constraint firstItem="PNT-Jj-eVq" firstAttribute="centerY" secondItem="FIb-oE-hMH" secondAttribute="centerY" id="jot-A7-oXE"/>
+                            <constraint firstItem="0FZ-cX-caY" firstAttribute="top" secondItem="488-sI-sA7" secondAttribute="bottom" constant="100" id="p0g-Cp-e3l"/>
                         </constraints>
                     </view>
                     <connections>

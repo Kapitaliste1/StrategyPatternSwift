@@ -10,7 +10,7 @@ import Foundation
 class PayByPayPal: PayStrategyPattern {
    
     private var isSignedIn : Bool = false
-    
+    static let shared = PayByPayPal()
     
     func pay(paymentAmount: Double, successHandler: @escaping (String) -> Void, failureHandler: @escaping (String) -> Void) {
         if self.isSignedIn {
@@ -26,7 +26,7 @@ class PayByPayPal: PayStrategyPattern {
     }
    
     
-    public func collectPaymentDetails() {
+    func collectPaymentDetails() {
         if self.verify() {
             /*
              User's PayPal account was verified

@@ -11,6 +11,8 @@ import Foundation
 class PayByCreditCard: PayStrategyPattern {
     
     private var creditCard : Card?
+    static let shared = PayByCreditCard()
+    
     
     func pay(paymentAmount: Double, successHandler: @escaping (String) -> Void, failureHandler: @escaping (String) -> Void) {
         if self.cardIsPresent() {
@@ -25,7 +27,7 @@ class PayByCreditCard: PayStrategyPattern {
     }
     
     
-    public func collectPaymentDetails() {
+    func collectPaymentDetails() {
         /*
          We can show a customized view here in order to collect the credit card information
          and create a new instance of a credit card.
