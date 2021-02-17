@@ -9,9 +9,9 @@ import Foundation
 
 
 public class Order : NSObject{
-    private var id: String?
-    private var totalCost: Double = 0.0
-    private var isClosed: Bool = false
+    var id: String?
+    var totalCost: Double = 0.0
+    var isClosed: Bool = false
     
     convenience init(totalCost : Double, isClosed : Bool ) {
         self.init()
@@ -20,13 +20,13 @@ public class Order : NSObject{
         self.id = UUID().uuidString
     }
     
-   
+    
     func processOrder(strategy : PayStrategyPattern){
         strategy.collectPaymentDetails()
         /*
          Here we could collect and store payment data from the strategy.
          */
     }
-
+    
     
 }

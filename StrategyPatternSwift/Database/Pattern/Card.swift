@@ -8,9 +8,9 @@
 import Foundation
 
 public class Card : NSObject{
-    private var cardNumber : String = ""
-    private var expirationDate : String = ""
-    private var cvv : Int = 0
+    var cardNumber : String = ""
+    var expirationDate : String = ""
+    var cvv : Int = 0
     
     convenience init(cardNumber : String, expirationDate : String, cvv : Int ) {
         self.init()

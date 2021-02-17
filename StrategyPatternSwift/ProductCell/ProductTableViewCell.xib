@@ -22,8 +22,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qRN-ib-QvO">
-                        <rect key="frame" x="281" y="17.5" width="24" height="24"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qRN-ib-QvO">
+                        <rect key="frame" x="281" y="18" width="24" height="23"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="24" id="Vrd-GX-Pw8"/>
                             <constraint firstAttribute="height" constant="24" id="uo2-vt-IGb"/>
@@ -45,4 +45,7 @@
             <point key="canvasLocation" x="140.57971014492756" y="138.95089285714286"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="bookmark.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

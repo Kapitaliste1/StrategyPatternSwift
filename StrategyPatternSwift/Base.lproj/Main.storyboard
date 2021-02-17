@@ -17,23 +17,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cRe-N1-GMo">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="69" width="414" height="537.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="7zT-3R-5NN"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="zdP-3I-gbF"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEi-SP-W2u">
+                                <rect key="frame" x="186" y="636.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpl-Ih-bRM">
+                                <rect key="frame" x="107" y="707.5" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VfV-hd-9zg"/>
+                                    <constraint firstAttribute="width" constant="200" id="hbg-yQ-N1r"/>
+                                </constraints>
+                                <state key="normal" title="Pay">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="payAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0m0-Aw-yb8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cRe-N1-GMo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4zT-P3-dUm"/>
-                            <constraint firstItem="cRe-N1-GMo" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="QhU-pp-2RV"/>
-                            <constraint firstItem="cRe-N1-GMo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eiK-mK-dVK"/>
-                            <constraint firstItem="cRe-N1-GMo" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="xA2-pl-W5d"/>
+                            <constraint firstItem="cRe-N1-GMo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6xZ-62-YjH"/>
+                            <constraint firstItem="rpl-Ih-bRM" firstAttribute="top" secondItem="JEi-SP-W2u" secondAttribute="bottom" constant="50" id="CiE-GF-c63"/>
+                            <constraint firstItem="cRe-N1-GMo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="E4V-IU-9iH"/>
+                            <constraint firstItem="rpl-Ih-bRM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N80-cV-NgT"/>
+                            <constraint firstItem="cRe-N1-GMo" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="O7Y-kO-HaD"/>
+                            <constraint firstItem="cRe-N1-GMo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OoP-LV-RxN"/>
+                            <constraint firstItem="JEi-SP-W2u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UfL-sH-M6r"/>
+                            <constraint firstItem="JEi-SP-W2u" firstAttribute="top" secondItem="cRe-N1-GMo" secondAttribute="bottom" constant="30" id="aYa-gv-gFB"/>
+                            <constraint firstItem="cRe-N1-GMo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="hMd-9d-BKr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentAmountLabel" destination="JEi-SP-W2u" id="I81-9X-Whb"/>
+                        <outlet property="tableView" destination="cRe-N1-GMo" id="fx3-04-xef"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

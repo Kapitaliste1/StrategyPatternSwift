@@ -16,13 +16,17 @@ class ProductTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        self.titleLabel.text = ""
+        self.statusImage.image = UIImage.init(systemName: "bookmark.circle")
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    var product : Product?{
+        didSet{
+            if let item = self.product{
+                self.titleLabel.text = item.name
+                self.statusImage.image = item.isSelected ? UIImage.init(systemName: "bookmark.circle.fill") : UIImage.init(systemName: "bookmark.circle")
+            }
+        }
+    }
 }
