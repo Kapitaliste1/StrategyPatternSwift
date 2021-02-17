@@ -95,7 +95,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FZ-cX-caY">
-                                <rect key="frame" x="107" y="648" width="200" height="50"/>
+                                <rect key="frame" x="107" y="573" width="200" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Mfe-zd-CIc"/>
@@ -120,7 +120,7 @@
                             <constraint firstItem="PNT-Jj-eVq" firstAttribute="centerX" secondItem="FIb-oE-hMH" secondAttribute="centerX" id="bfY-7t-flW"/>
                             <constraint firstItem="0FZ-cX-caY" firstAttribute="centerX" secondItem="ugH-U3-KWp" secondAttribute="centerX" id="hI9-WM-dXp"/>
                             <constraint firstItem="PNT-Jj-eVq" firstAttribute="centerY" secondItem="FIb-oE-hMH" secondAttribute="centerY" id="jot-A7-oXE"/>
-                            <constraint firstItem="0FZ-cX-caY" firstAttribute="top" secondItem="488-sI-sA7" secondAttribute="bottom" constant="100" id="p0g-Cp-e3l"/>
+                            <constraint firstItem="0FZ-cX-caY" firstAttribute="top" secondItem="488-sI-sA7" secondAttribute="bottom" constant="25" id="p0g-Cp-e3l"/>
                         </constraints>
                     </view>
                     <connections>
