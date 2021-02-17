@@ -24,8 +24,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="zdP-3I-gbF"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEi-SP-W2u">
-                                <rect key="frame" x="186" y="636.5" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEi-SP-W2u">
+                                <rect key="frame" x="202" y="636.5" width="10.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="VfV-hd-9zg"/>
-                                    <constraint firstAttribute="width" constant="200" id="hbg-yQ-N1r"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="hbg-yQ-N1r"/>
                                 </constraints>
                                 <state key="normal" title="Pay">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,6 +67,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="118.52678571428571"/>
+        </scene>
+        <!--Payment Choice View Controller-->
+        <scene sceneID="awZ-di-Sau">
+            <objects>
+                <viewController storyboardIdentifier="PaymentChoiceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rVr-Gz-VYa" customClass="PaymentChoiceViewController" customModule="StrategyPatternSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ugH-U3-KWp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNT-Jj-eVq">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.35153336958451703" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="dismissAction:" destination="rVr-Gz-VYa" eventType="touchUpInside" id="tFf-Ae-FTc"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="488-sI-sA7">
+                                <rect key="frame" x="41.5" y="348" width="331" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="9hs-Ho-4iR"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="rVr-Gz-VYa" id="mvq-bq-8K7"/>
+                                    <outlet property="delegate" destination="rVr-Gz-VYa" id="LmP-HV-sYz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FIb-oE-hMH"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="488-sI-sA7" firstAttribute="width" secondItem="ugH-U3-KWp" secondAttribute="width" multiplier="0.8" id="3N1-Bl-4rL"/>
+                            <constraint firstItem="488-sI-sA7" firstAttribute="centerX" secondItem="ugH-U3-KWp" secondAttribute="centerX" id="3jL-X3-F0Y"/>
+                            <constraint firstItem="PNT-Jj-eVq" firstAttribute="height" secondItem="ugH-U3-KWp" secondAttribute="height" id="Cuf-jV-i9W"/>
+                            <constraint firstItem="PNT-Jj-eVq" firstAttribute="width" secondItem="ugH-U3-KWp" secondAttribute="width" id="G5X-Fl-Ubz"/>
+                            <constraint firstItem="488-sI-sA7" firstAttribute="centerY" secondItem="ugH-U3-KWp" secondAttribute="centerY" id="QyH-x8-Avl"/>
+                            <constraint firstItem="PNT-Jj-eVq" firstAttribute="centerX" secondItem="FIb-oE-hMH" secondAttribute="centerX" id="bfY-7t-flW"/>
+                            <constraint firstItem="PNT-Jj-eVq" firstAttribute="centerY" secondItem="FIb-oE-hMH" secondAttribute="centerY" id="jot-A7-oXE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="488-sI-sA7" id="0D0-Wy-SSj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxw-uO-rOv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="119"/>
         </scene>
     </scenes>
     <resources>

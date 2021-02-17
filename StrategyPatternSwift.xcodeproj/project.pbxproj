@@ -22,6 +22,10 @@
 		ABBEA26525DCFD2000B22568 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABBEA26325DCFD2000B22568 /* ProductTableViewCell.xib */; };
 		ABBEA26F25DCFFB700B22568 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBEA26E25DCFFB700B22568 /* Product.swift */; };
 		ABBEA27225DCFFC300B22568 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBEA27125DCFFC300B22568 /* Order.swift */; };
+		ABBEA27825DD0DB900B22568 /* PaymentChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBEA27725DD0DB900B22568 /* PaymentChoiceViewController.swift */; };
+		ABBEA27B25DD101D00B22568 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBEA27A25DD101D00B22568 /* PaymentMethod.swift */; };
+		ABBEA28025DD10A100B22568 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBEA27E25DD10A100B22568 /* PaymentTableViewCell.swift */; };
+		ABBEA28125DD10A100B22568 /* PaymentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABBEA27F25DD10A100B22568 /* PaymentTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		ABBEA26325DCFD2000B22568 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		ABBEA26E25DCFFB700B22568 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		ABBEA27125DCFFC300B22568 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		ABBEA27725DD0DB900B22568 /* PaymentChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentChoiceViewController.swift; sourceTree = "<group>"; };
+		ABBEA27A25DD101D00B22568 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
+		ABBEA27E25DD10A100B22568 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		ABBEA27F25DD10A100B22568 /* PaymentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 		ABBEA22625DCE64A00B22568 /* StrategyPatternSwift */ = {
 			isa = PBXGroup;
 			children = (
+				ABBEA27D25DD108400B22568 /* PaymentCell */,
 				ABBEA26125DCFCF100B22568 /* ProductCell */,
 				ABBEA23F25DCE66400B22568 /* Database */,
 				ABBEA22725DCE64A00B22568 /* AppDelegate.swift */,
@@ -83,6 +92,7 @@
 				ABBEA23325DCE64C00B22568 /* Assets.xcassets */,
 				ABBEA23525DCE64C00B22568 /* LaunchScreen.storyboard */,
 				ABBEA23825DCE64C00B22568 /* Info.plist */,
+				ABBEA27725DD0DB900B22568 /* PaymentChoiceViewController.swift */,
 			);
 			path = StrategyPatternSwift;
 			sourceTree = "<group>";
@@ -103,6 +113,7 @@
 				ABBEA25C25DCF4D100B22568 /* Card.swift */,
 				ABBEA26E25DCFFB700B22568 /* Product.swift */,
 				ABBEA27125DCFFC300B22568 /* Order.swift */,
+				ABBEA27A25DD101D00B22568 /* PaymentMethod.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -124,6 +135,15 @@
 				ABBEA26325DCFD2000B22568 /* ProductTableViewCell.xib */,
 			);
 			path = ProductCell;
+			sourceTree = "<group>";
+		};
+		ABBEA27D25DD108400B22568 /* PaymentCell */ = {
+			isa = PBXGroup;
+			children = (
+				ABBEA27E25DD10A100B22568 /* PaymentTableViewCell.swift */,
+				ABBEA27F25DD10A100B22568 /* PaymentTableViewCell.xib */,
+			);
+			path = PaymentCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +207,7 @@
 				ABBEA26525DCFD2000B22568 /* ProductTableViewCell.xib in Resources */,
 				ABBEA23425DCE64C00B22568 /* Assets.xcassets in Resources */,
 				ABBEA22F25DCE64A00B22568 /* Main.storyboard in Resources */,
+				ABBEA28125DD10A100B22568 /* PaymentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABBEA27825DD0DB900B22568 /* PaymentChoiceViewController.swift in Sources */,
 				ABBEA22C25DCE64A00B22568 /* ViewController.swift in Sources */,
 				ABBEA23225DCE64A00B22568 /* StrategyPatternSwift.xcdatamodeld in Sources */,
 				ABBEA22825DCE64A00B22568 /* AppDelegate.swift in Sources */,
@@ -208,6 +230,8 @@
 				ABBEA22A25DCE64A00B22568 /* SceneDelegate.swift in Sources */,
 				ABBEA27225DCFFC300B22568 /* Order.swift in Sources */,
 				ABBEA26F25DCFFB700B22568 /* Product.swift in Sources */,
+				ABBEA28025DD10A100B22568 /* PaymentTableViewCell.swift in Sources */,
+				ABBEA27B25DD101D00B22568 /* PaymentMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

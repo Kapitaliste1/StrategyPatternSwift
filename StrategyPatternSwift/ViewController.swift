@@ -30,7 +30,10 @@ class ViewController: UIViewController {
     
     
     @IBAction func payAction(_ sender: Any) {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "PaymentChoiceViewController")
+        viewController.modalPresentationStyle = .overCurrentContext
+        self.show(viewController, sender: self)
     }
     
     
